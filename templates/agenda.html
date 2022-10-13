@@ -1,0 +1,9 @@
+{% extends "model-page.html" %}
+{% block content %} <!--Todo o conteúdo desse arquivo vai estar no bloco "content", que irá ser direcionado ao arquivo model-page-->
+    <h2>Agendamentos</h2> 
+    <ul style="font-size:18px">
+        {% for evento in eventos %} <!--usando a porcentagem pode-se usar comandos em Django no html-->
+            <li>{{evento.titulo}} - {{evento.get_data_evento }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
